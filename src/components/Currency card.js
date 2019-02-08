@@ -3,20 +3,35 @@ import React, { Component } from 'react';
 class CurrencyCard extends Component {
     render() {
         return (
-            <div className={'card'} style={CurrencyCardStyle}>
-                <h5>Валюта: {this.props.currency.ccy}</h5>
-                <p>Национальная валюта: {this.props.currency.base_ccy}</p>
-                <p>Курс покупки: {this.props.currency.buy}</p>
-                <p>Курс продажи: {this.props.currency.sale}</p>
+            <div className={'card container'} style={CurrencyCardStyle}>
+                <h5>
+                    <span>Валюта: </span>
+                    <span style={dataStyle}>{this.props.currency.ccy}</span>
+                </h5>
+                <p>
+                    <span>Национальная валюта: </span>
+                    <span style={dataStyle}>{this.props.currency.base_ccy}</span>
+                </p>
+                <p>
+                    <span>Курс покупки: </span>
+                    <span style={dataStyle}>{this.props.currency.buy}</span>
+                </p>
+                <p>
+                    <span>Курс продажи: </span>
+                    <span style={dataStyle}>{this.props.currency.sale}</span>
+                </p>
             </div>
         );
     }
 }
 
+const dataStyle = {
+    float: 'right'
+};
 const CurrencyCardStyle = {
-    padding: '15px',
+    padding: '0 15px',
     background: '#424242',
-    border: '1px solid green',
+    border: '2px solid green',
     borderRadius: '10px'
 };
 

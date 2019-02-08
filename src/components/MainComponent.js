@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import config from './config';
 import Currencys from './Currencys';
 
 class MainComponent extends Component {
@@ -10,10 +9,14 @@ class MainComponent extends Component {
         super(props);
         this.state = {
             currExchange: [],
+            coursid: 11,
         };
     };
 
     componentWillMount() {
+        let config = {
+            apiUrl: `https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=${this.state.coursid}`
+        };
         axios.get(config.apiUrl)
             .then(res => this.setState({
                 currExchange: res.data.map( (el, i) => {
@@ -30,9 +33,10 @@ class MainComponent extends Component {
 
     render() {
         return (
-            <div className={'container'}>
+            <section className={'container'}>
+                <h4>Курсы валют ПриватБанка</h4>
                 <Currencys currExchange={this.state.currExchange}/>
-            </div>
+            </section>
         );
     }
 }
