@@ -1,42 +1,21 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React, { Component } from 'react'
+import { BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import Currencys from './Currencys';
+import Menu from './Menu/Menu';
+import CRatePB from './c-rate PB/CRatePB';
+import Error from './Error';
 
 class MainComponent extends Component {
 
-    constructor(props){
-        super(props);
-        this.state = {
-            currExchange: [],
-            coursid: 11,
-        };
-    };
-
-    componentWillMount() {
-        let config = {
-            apiUrl: `https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=${this.state.coursid}`
-        };
-        axios.get(config.apiUrl)
-            .then(res => this.setState({
-                currExchange: res.data.map( (el, i) => {
-                    let currency = {
-                        ccy: el.ccy,
-                        base_ccy: el.base_ccy,
-                        buy: el.buy,
-                        sale: el.sale
-                    };
-                    return currency;
-                })
-            }));
-    }
-
     render() {
         return (
-            <section className={'container'}>
-                <h4>Курсы валют ПриватБанка</h4>
-                <Currencys currExchange={this.state.currExchange}/>
-            </section>
+            <BrowserRouter>
+                <Switch>
+                    <Route path={'/'} component={Menu} exact />
+                    <Route path={'/c-rate'} component={CRatePB} />
+                    <Route component={Error} />
+                </Switch>
+            </BrowserRouter>
         );
     }
 }
