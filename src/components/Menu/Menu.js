@@ -10,6 +10,12 @@ class Menu extends Component {
                 <h4>Меню:</h4>
                 <div>
                     <p style={menuStyle}><Link to={'/c-rate'} style={LinkStyle}><b>Курсы валют ПриватБанка</b></Link></p>
+                    <p style={menuStyle}><Link to={'/coming_soon'} style={LinkStyle}><b>Курсы валют, драгоценных металлов НБУ и ЦБ РФ</b></Link></p>
+                    <p style={menuStyle}><Link to={'/coming_soon'} style={LinkStyle}><b>Архив курсов валют ПриватБанка, НБУ</b></Link></p>
+                    <p style={menuStyle}><Link to={'/coming_soon'} style={LinkStyle}><b>Инфраструктура ПриватБанка. Отделения</b></Link></p>
+                    <p style={menuStyle}><Link to={'/coming_soon'} style={LinkStyle}><b>Инфраструктура ПриватБанка. Банкоматы</b></Link></p>
+                    <p style={menuStyle}><Link to={'/coming_soon'} style={LinkStyle}><b>Инфраструктура ПриватБанка. Терминалы самообслуживания</b></Link></p>
+                    <p style={menuStyle}><Link to={'/coming_soon'} style={LinkStyle}><b>Партнеры программы Бонус+</b></Link></p>
                 </div>
             </section>
         );
