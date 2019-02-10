@@ -11,7 +11,7 @@ class CRatePB extends Component {
         super(props);
         this.state = {
             currExchange: [],
-            coursid: 5,
+            coursid: 11,
         };
     };
 
@@ -40,7 +40,7 @@ class CRatePB extends Component {
 
     componentWillMount() {
         let config = {
-            apiUrl: `https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=${this.state.coursid}`
+            apiUrl: `https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5`
         };
         axios.get(config.apiUrl)
             .then(res => this.setState({
