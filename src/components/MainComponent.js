@@ -11,9 +11,17 @@ class MainComponent extends Component {
         return (
             <BrowserRouter>
                 <Switch>
-                    <Route path={'/'} component={Menu} exact />
-                    <Route path={'/c-rate'} component={CRatePB} />
-                    <Route component={Error} />
+                    <Route path={'/'}
+                           component={Menu}
+                           exact />
+                    <Route path={'/c-rate'}
+                           component={CRatePB}
+                           />
+                    <Route path={'/story'}
+                           component={CurrStory}
+                           />
+                    <Route component={Error}
+                           />
                 </Switch>
             </BrowserRouter>
         );

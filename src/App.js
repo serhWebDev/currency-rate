@@ -4,6 +4,7 @@ import Header from './components/Header';
 import MainComponent from './components/MainComponent';
 
 import './App.css';
+import 'materialize-css';
 
 class App extends Component {
 
