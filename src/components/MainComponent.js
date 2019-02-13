@@ -17,9 +17,6 @@ class MainComponent extends Component {
                     <Route path={'/c-rate'}
                            component={CRatePB}
                            />
-                    <Route path={'/story'}
-                           component={CurrStory}
-                           />
                     <Route component={Error}
                            />
                 </Switch>
