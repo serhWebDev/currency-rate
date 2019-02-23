@@ -4,28 +4,24 @@
   "description": "C-Rate app by serhiiVek",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "48x48",
+      "src": "img/iconS.png",
+      "sizes": "36x36",
       "type": "image/png"
     }, {
-      "src": "favicon.ico",
+      "src": "img/icon72x72.png",
       "sizes": "72x72",
       "type": "image/png"
     }, {
-      "src": "favicon.ico",
-      "sizes": "96x96",
-      "type": "image/png"
-    }, {
-      "src": "favicon.ico",
+      "src": "img/icon144x144.png",
       "sizes": "144x144",
       "type": "image/png"
     }, {
-      "src": "favicon.ico",
-      "sizes": "168x168",
+      "src": "img/icon192x192.png",
+      "sizes": "192x192",
       "type": "image/png"
     }, {
-      "src": "favicon.ico",
-      "sizes": "192x192",
+      "src": "img/icon512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     }
   ],
